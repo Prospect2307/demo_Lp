@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les 7 principaux cas d’utilisation des données pour les start-ups</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .container {
+            max-width: 975px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <img src="images/AWS-startusps-logo.png" alt="" style="width: 230.25px; height: 40px; margin-top: 25px;"><br><br>
+            <img src="images/banner-7.jpg" alt="" style="width: 955px; height: 396px;">
+            <br><br><br>
+        </div>
+
+        <div class="row" style="gap: 50px;">
+            <!-- section -1 -->
+            <div class="col-md-5" style="width: 375px;">
+                <!-- <img src="images/8-Key-Considerations-When-Assessing-SSE-Platforms.jpg" alt=""
+                    style="width:349px; height: 270px;">
+                <br><br> -->
+                <h2 style="font-family: sans-serif; font-size: 30px; color: black;"><b>Les 7 principaux cas d’utilisation des données pour les start-ups</b></h2><br>
+                <p style="font-family: sans-serif; font-size: 16px; color: black">Savez-vous à quel point les données de votre startup sont puissantes ? Les exploitez-vous pleinement ?<br><br>
+                   
+                    </p>
+                    <p style="font-family: sans-serif; font-size: 16px; color: black">Découvrez comment des startups leaders comme Thrive Market, Postis et AI21 Labs utilisent les données pour élaborer des stratégies performantes qui accélèrent la croissance et l’innovation. Qu’il s’agisse d’améliorer l’expérience client, d’optimiser la productivité ou de réduire les coûts, les données peuvent vous aider à relever les défis de votre startup. Lisez l’eBook « 7 Cas d’Utilisation Essentiels des Données pour les Startups » pour découvrir comment des startups comme la vôtre débloquent la valeur des données et se dotent d’un avantage concurrentiel grâce à AWS.</p>
+                
+            </div>
+
+            <!-- section - 2 -->
+            <div class="col-md-6" style="width: 550px">
+                <form action="" method="get" id="myForm" class="mb-5" style="padding: 7px; ">
+
+                    <!-- First Name and Last Name -->
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <div style="flex: 1; margin-right: 10px;">
+                            <label for="fname"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+                                <!-- <span style="color: red;">*</span> -->
+
+                                <input type="fname" name="fname" id="fname" placeholder="Prénom *" oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '')"
+                                    style="width: 100%; height: 38px; padding: 6px 12px; border: 1px solid gainsboro; border-radius: 8px; font-size: 16px; font-family: sans-serif; outline: none;">
+
+                            </label>
+                            <span id="fnameError" class="error-text"></span>
+
+
+                        </div>
+                        <div style="flex: 1;">
+                            <label for="lname"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+                                
+                                <!-- <span style="color: red;">*</span> -->
+                            </label>
+                            <input type="text" name="lname" id="lname" placeholder="Nom de famille *" oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '')"
+                                style="width: 100%; height: 38px; padding: 6px 12px; border: 1px solid gainsboro; border-radius: 8px; font-size: 16px; font-family: sans-serif; outline: none;">
+
+                            <span id="lnameError" class="error-text"></span>
+
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- Email and Phone -->
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <div style="flex: 1; margin-right: 10px;">
+                            <label for="email"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+                                <!-- <span style="color: red;">*</span> -->
+
+                                <input type="email" name="email" id="email" placeholder="Adresse e-mail professionnelle  *"
+                                    style="width: 100%; height: 38px; padding: 6px 12px; border: 1px solid gainsboro; border-radius: 8px; font-size: 16px; font-family: sans-serif; outline: none;">
+
+                            </label>
+                            <span id="emailError" class="error-text"></span>
+
+                        </div>
+                        <div style="flex: 1;">
+                            <label for="phone"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+
+                                <!-- <span style="color: red;">*</span> -->
+                            </label>
+                            <input type="phone" name="phone" id="phone" placeholder="Numéro de téléphone  *" 
+                                style="width: 100%; height: 38px; padding: 6px 12px; border: 1px solid gainsboro; border-radius: 8px; font-size: 16px; font-family: sans-serif; outline: none;">
+
+                            <span id="phoneError" class="error-text"></span>
+
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- Company Name and Job Title -->
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <div style="flex: 1; margin-right: 10px;">
+                            <label for="cname"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+                                
+                                <!-- <span style="color: red;">*</span> -->
+
+                                <input type="cname" name="cname" id="cname" placeholder="Nom de l'entreprise *"
+                                    style="width: 100%; height: 38px; padding: 6px 12px; border: 1px solid gainsboro; border-radius: 8px; font-size: 16px; font-family: sans-serif; outline: none;">
+
+                            </label>
+                            <span id="cnameError" class="error-text"></span>
+
+                        </div>
+                        <div style="flex: 1;">
+                            <label for="jtitle"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+                                
+
+                                <!-- <span style="color: red;">*</span> -->
+                            </label>
+                            <input type="text" name="jtitle" id="jtitle" placeholder="Titre d'emploi *"
+                                style="width: 100%; height: 38px; padding: 6px 12px; border: 1px solid gainsboro; border-radius: 8px; font-size: 16px; font-family: sans-serif; outline: none;">
+
+                            <span id="jtitleError" class="error-text"></span>
+
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- Company Size and Industry -->
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <div style="flex: 1; margin-right: 10px;">
+                            <label for="csize"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+                                
+                                <!--<span style="color: red;">*</span>-->
+
+                            </label>
+                            <select name="csize" id="csize" class="form-control" 
+                                style="width: 100%; height: 38px; padding: 6px 12px; font-size: 16px; color: grey; border: 1px solid  gainsboro; border-radius: 8px;">
+                                <option value="">Taille de l'entreprise *</option>
+                                <option value="1-19 employés">1-19 employés</option><option value="20-99 employés">20-99 employés</option><option value="100-499 employés">100-499 employés</option><option value="500-999 employés">500-999 employés</option><option value="1 000 à 9 999 employés">1 000 à 9 999 employés</option><option value="10 000 employés ou plus">10 000 employés ou plus</option></select>
+                            <span id="csizeError" class="error-text"></span>
+
+                        </div>
+                        <div style="flex: 1;">
+                            <label for="ind"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+
+                                <!--<span style="color: red;">*</span>-->
+                            </label>
+                            <select name="ind" id="ind" class="form-control"
+                                style="width: 100%; height: 38px; padding: 6px 12px; font-size: 16px; color: grey; border: 1px solid  gainsboro; border-radius: 8px;">
+                           
+                                <option value="">Industrie *</option><option value="Aérospatial">Aérospatial</option><option value="Agriculture">Agriculture</option><option value="Automobile">Automobile</option><option value="Autre">Autre</option><option value="Biens de consommation">Biens de consommation</option><option value="Éducation">Éducation</option><option value="Énergie et services publics">Énergie et services publics</option><option value="Exploitation minière">Exploitation minière</option><option value="Fabrication">Fabrication</option><option value="Gaz de pétrole">Gaz de pétrole</option><option value="Gouvernement">Gouvernement</option><option value="Grosse distribution">Grosse distribution</option><option value="Hospitalité">Hospitalité</option><option value="Immobilier et construction">Immobilier et construction</option><option value="Informatique et électronique">Informatique et électronique</option><option value="Jeux">Jeux</option><option value="Logiciels et Internet">Logiciels et Internet</option><option value="Médias et divertissement">Médias et divertissement</option><option value="Organisation à but non lucratif">Organisation à but non lucratif</option><option value="Publicité Marketing">Publicité Marketing</option><option value="Sciences de la vie">Sciences de la vie</option><option value="Services financiers">Services financiers</option><option value="Services professionnels">Services professionnels</option><option value="Soins de santé">Soins de santé</option><option value="Télécommunications">Télécommunications</option><option value="Transport et logistique">Transport et logistique</option><option value="Vente au détail">Vente au détail</option><option value="Voyage">Voyage</option></select>
+
+                            <span id="indError" class="error-text"></span>
+
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- Address and City -->
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+               
+
+                        <div style="flex: 1;  margin-right: 10px;">
+                            <label for="jobrole"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+
+                                <!--<span style="color: red;">*</span>-->
+                            </label>
+                            <select name="jobrole" id="jobrole" class="form-control"
+                                style="width: 100%; height: 38px; padding: 6px 12px; font-size: 16px; color: grey; border: 1px solid  gainsboro; border-radius: 8px;">
+                           
+                                <option value="">Rôle de l'emploi *</option><option value="Administrateur du système">Administrateur du système</option><option value="Analyste Presse / Médias">Analyste Presse / Médias</option><option value="Architecte de solutions ou de systèmes">Architecte de solutions ou de systèmes</option><option value="Capital-risqueur">Capital-risqueur</option><option value="Conseiller / Consultant">Conseiller / Consultant</option><option value="Développeur / Ingénieur">Développeur / Ingénieur</option><option value="Dirigeant d'entreprise">Dirigeant d'entreprise</option><option value="Entrepreneur (fondateur/co-fondateur)">Entrepreneur (fondateur/co-fondateur)</option><option value="Étudiant">Étudiant</option><option value="Professionnel informatique ou responsable technique">Professionnel informatique ou responsable technique</option><option value="Responsable informatique">Responsable informatique</option><option value="Universitaire / Chercheur">Universitaire / Chercheur</option><option value="Ventes et Marketing">Ventes et Marketing</option></select>
+
+                            <span id="jobroleError" class="error-text"></span>
+
+                        </div>
+
+                        
+                        <div style="flex: 1; margin-right: 10px;">
+                            <label for="pcode"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+                                <!--<span style="color: red;">*</span>-->
+
+                                <input type="text" name="pcode" id="pcode" placeholder="Code Postal *"
+                                    style="width: 100%; height: 38px; padding: 6px 12px; border: 1px solid gainsboro; border-radius: 8px; font-size: 16px; font-family: sans-serif; outline: none;">
+
+                            </label>
+                            <span id="pcodeError" class="error-text"></span>
+
+                        </div>
+                    
+                    </div>
+                    <br>
+
+                    <div style=" margin-bottom: 10px;">
+                      
+
+
+                        <div style="flex: 1; width: 50%;">
+                            <label for="country"
+                                style="font-size: 14px; font-family: sans-serif; color: black; display: block;">
+
+                                <!-- <span style="color: red;">*</span> -->
+                            </label>
+
+                            <select name="country" id="country" class="form-control"
+                                style="width: 100%; height: 35px; padding: 6px 12px; font-size: 16px; color:grey; border: 1px solid gainsboro; border-radius: 5px;">
+                               <option value="">Pays *</option><option value="Afghanistan">Afghanistan</option><option value="Afrique du Sud">Afrique du Sud</option><option value="Albanie">Albanie</option><option value="Algérie">Algérie</option><option value="Allemagne">Allemagne</option><option value="Aller">Aller</option><option value="Andorre">Andorre</option><option value="Angola">Angola</option><option value="Anguilla">Anguilla</option><option value="Antarctique">Antarctique</option><option value="Antigua-et-Barbuda">Antigua-et-Barbuda</option><option value="Arabie Saoudite">Arabie Saoudite</option><option value="Argentine">Argentine</option><option value="Arménie">Arménie</option><option value="Aruba">Aruba</option><option value="Australie">Australie</option><option value="Azerbaïdjan">Azerbaïdjan</option><option value="Bahamas">Bahamas</option><option value="Bahreïn">Bahreïn</option><option value="Bangladesh">Bangladesh</option><option value="Barbade">Barbade</option><option value="Belgique">Belgique</option><option value="Bélize">Bélize</option><option value="Bénin">Bénin</option><option value="Bermudes">Bermudes</option><option value="Bhoutan">Bhoutan</option><option value="Biélorussie">Biélorussie</option><option value="Birmanie">Birmanie</option><option value="Bolivie">Bolivie</option><option value="Bonaire, Saint-Eustache et Saba">Bonaire, Saint-Eustache et Saba</option><option value="Bosnie Herzégovine">Bosnie Herzégovine</option><option value="Botswana">Botswana</option><option value="Brésil">Brésil</option><option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgarie">Bulgarie</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cambodge">Cambodge</option><option value="Cameroun">Cameroun</option><option value="Canada">Canada</option><option value="Cap-Vert">Cap-Vert</option><option value="Chili">Chili</option><option value="Chine">Chine</option><option value="Chypre">Chypre</option><option value="Colombie">Colombie</option><option value="Comores">Comores</option><option value="Congo, République démocratique du">Congo, République démocratique du</option><option value="Congo, République du">Congo, République du</option><option value="Corée du Nord">Corée du Nord</option><option value="Corée du Sud">Corée du Sud</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Croatie">Croatie</option><option value="Cuba">Cuba</option><option value="Curacao">Curacao</option><option value="Danemark">Danemark</option><option value="Djibouti">Djibouti</option><option value="Dominique">Dominique</option><option value="Egypte">Egypte</option><option value="Emirats Arabes Unis">Emirats Arabes Unis</option><option value="Équateur">Équateur</option><option value="Érythrée">Érythrée</option><option value="Espagne">Espagne</option><option value="Estonie">Estonie</option><option value="Eswatini (Swaziland)">Eswatini (Swaziland)</option><option value="États-Unis">États-Unis</option><option value="Ethiopie">Ethiopie</option><option value="Fidji">Fidji</option><option value="Finlande">Finlande</option><option value="France">France</option><option value="Gabon">Gabon</option><option value="Gambie">Gambie</option><option value="Géorgie">Géorgie</option><option value="Géorgie du Sud">Géorgie du Sud</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Grèce">Grèce</option><option value="Grenade">Grenade</option><option value="Groenland">Groenland</option><option value="Guadeloupe">Guadeloupe</option><option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guernesey">Guernesey</option><option value="Guinée">Guinée</option><option value="Guinée Équatoriale">Guinée Équatoriale</option><option value="Guinée-Bissau">Guinée-Bissau</option><option value="Guyane">Guyane</option><option value="Guyane Française">Guyane Française</option><option value="Haïti">Haïti</option><option value="Honduras">Honduras</option><option value="Hong Kong">Hong Kong</option><option value="Hongrie">Hongrie</option><option value="Île Bouvet">Île Bouvet</option><option value="île de Man">île de Man</option><option value="Iles Aland">Iles Aland</option><option value="Îles Caïmans">Îles Caïmans</option><option value="Îles Cocos">Îles Cocos</option><option value="Îles Féroé">Îles Féroé</option><option value="Îles Heard et McDonald">Îles Heard et McDonald</option><option value="Îles Mariannes du Nord">Îles Mariannes du Nord</option><option value="Iles Marshall">Iles Marshall</option><option value="Îles mineures éloignées des États-Unis">Îles mineures éloignées des États-Unis</option><option value="Îles Svalbard et Jan Mayen">Îles Svalbard et Jan Mayen</option><option value="îles Turques-et-Caïques">îles Turques-et-Caïques</option><option value="Îles Vierges britanniques">Îles Vierges britanniques</option><option value="Îles Vierges, États-Unis">Îles Vierges, États-Unis</option><option value="Inde">Inde</option><option value="Indonésie">Indonésie</option><option value="Irak">Irak</option><option value="Irlande">Irlande</option><option value="Islande">Islande</option><option value="Israël">Israël</option><option value="Italie">Italie</option><option value="Jamaïque">Jamaïque</option><option value="Japon">Japon</option><option value="Jersey">Jersey</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kirghizistan">Kirghizistan</option><option value="Kiribati">Kiribati</option><option value="Koweit">Koweit</option><option value="L'Autriche">L'Autriche</option><option value="le Portugal">le Portugal</option><option value="Le Salvador">Le Salvador</option><option value="les Îles Cook">les Îles Cook</option><option value="les îles Falkland">les îles Falkland</option><option value="Les îles Salomon">Les îles Salomon</option><option value="les Seychelles">les Seychelles</option><option value="Lesotho">Lesotho</option><option value="Lettonie">Lettonie</option><option value="Liban">Liban</option><option value="Libéria">Libéria</option><option value="Libye">Libye</option><option value="Liechtenstein">Liechtenstein</option><option value="L'île de noël">L'île de noël</option><option value="l'ile de Norfolk">l'ile de Norfolk</option><option value="L'Iran">L'Iran</option><option value="Lituanie">Lituanie</option><option value="Luxembourg">Luxembourg</option><option value="Macao">Macao</option><option value="Macédoine">Macédoine</option><option value="Madagascar">Madagascar</option><option value="Malaisie">Malaisie</option><option value="Malawi">Malawi</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malte">Malte</option><option value="Maroc">Maroc</option><option value="Martinique">Martinique</option><option value="Maurice">Maurice</option><option value="Mauritanie">Mauritanie</option><option value="Mayotte">Mayotte</option><option value="Mexique">Mexique</option><option value="Micronésie">Micronésie</option><option value="Moldavie">Moldavie</option><option value="Monaco">Monaco</option><option value="Mongolie">Mongolie</option><option value="Monténégro">Monténégro</option><option value="Montserrat">Montserrat</option><option value="Mozambique">Mozambique</option><option value="Namibie">Namibie</option><option value="Nauru">Nauru</option><option value="Népal">Népal</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Nioué">Nioué</option><option value="Norvège">Norvège</option><option value="Nouvelle Calédonie">Nouvelle Calédonie</option><option value="Nouvelle-Zélande">Nouvelle-Zélande</option><option value="Oman">Oman</option><option value="Ouganda">Ouganda</option><option value="Ouzbékistan">Ouzbékistan</option><option value="Pakistan">Pakistan</option><option value="Palaos">Palaos</option><option value="Palestine, État de">Palestine, État de</option><option value="Panama">Panama</option><option value="Papouasie Nouvelle Guinée">Papouasie Nouvelle Guinée</option><option value="Paraguay">Paraguay</option><option value="Pays-Bas">Pays-Bas</option><option value="Pérou">Pérou</option><option value="Philippines">Philippines</option><option value="Pitcairn">Pitcairn</option><option value="Pologne">Pologne</option><option value="Polynésie française">Polynésie française</option><option value="Porto Rico">Porto Rico</option><option value="Qatar">Qatar</option><option value="République centrafricaine">République centrafricaine</option><option value="République démocratique populaire lao">République démocratique populaire lao</option><option value="République dominicaine">République dominicaine</option><option value="République tchèque">République tchèque</option><option value="Réunion">Réunion</option><option value="Roumanie">Roumanie</option><option value="Royaume-Uni">Royaume-Uni</option><option value="Russie">Russie</option><option value="Rwanda">Rwanda</option><option value="Sahara occidental">Sahara occidental</option><option value="Saint Barthélemy">Saint Barthélemy</option><option value="Saint Marin">Saint Marin</option><option value="Saint Martin">Saint Martin</option><option value="Saint-Christophe-et-Niévès">Saint-Christophe-et-Niévès</option><option value="Sainte-Hélène">Sainte-Hélène</option><option value="Sainte-Lucie">Sainte-Lucie</option><option value="Saint-Martin">Saint-Martin</option><option value="Saint-Pierre-et-Miquelon">Saint-Pierre-et-Miquelon</option><option value="Saint-Siège">Saint-Siège</option><option value="Saint-Vincent-et-les-Grenadines">Saint-Vincent-et-les-Grenadines</option><option value="Samoa">Samoa</option><option value="Samoa américaines">Samoa américaines</option><option value="Sao Tomé et Principe">Sao Tomé et Principe</option><option value="Sénégal">Sénégal</option><option value="Serbie">Serbie</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapour">Singapour</option><option value="Slovaquie">Slovaquie</option><option value="Slovénie">Slovénie</option><option value="Somalie">Somalie</option><option value="Soudan">Soudan</option><option value="Soudan du sud">Soudan du sud</option><option value="Sri Lanka">Sri Lanka</option><option value="Suède">Suède</option><option value="Suisse">Suisse</option><option value="Surinam">Surinam</option><option value="Syrie">Syrie</option><option value="Tadjikistan">Tadjikistan</option><option value="Taïwan">Taïwan</option><option value="Tanzanie">Tanzanie</option><option value="Tchad">Tchad</option><option value="Terres australes françaises">Terres australes françaises</option><option value="Territoire britannique de l'océan Indien">Territoire britannique de l'océan Indien</option><option value="Thaïlande">Thaïlande</option><option value="Timor-Leste">Timor-Leste</option><option value="Tokélaou">Tokélaou</option><option value="Tonga">Tonga</option><option value="Trinité-et-Tobago">Trinité-et-Tobago</option><option value="Tunisie">Tunisie</option><option value="Turkménistan">Turkménistan</option><option value="Turquie">Turquie</option><option value="Tuvalu">Tuvalu</option><option value="Ukraine">Ukraine</option><option value="Uruguay">Uruguay</option><option value="Vanuatu">Vanuatu</option><option value="Venezuela">Venezuela</option><option value="Viêt Nam">Viêt Nam</option><option value="Wallis et Futuna">Wallis et Futuna</option><option value="Yémen">Yémen</option><option value="Zambie">Zambie</option><option value="Zimbabwe">Zimbabwe</option></select>
+
+                            <span id="countryError" class="error-text"></span>
+
+                        </div>
+                    </div>
+                    <br>
+
+                    
+                    <span id="stimme2Error" class="error-text"></span>
+                   
+
+                  
+
+                    <div class="form-check mt-4" style="color: black; margin-top: 15px;">
+                        <input type="checkbox" name="stimme" id="" class="form-check-input"
+                            style="font-size: 14px; font-family: sans-serif;">
+                        <label for="stimme" class="form-check-label">
+                            Oui, j'aimerais Techintelpro fournisse mes coordonnées à <a href="https://aws.amazon.com/legal/marketingentities/" >Amazon Web Services (AWS)</a> afin qu'AWS puisse partager les dernières actualités et offres AWS avec moi par e-mail, par courrier ou par téléphone.
+                        </label>
+                    </div>
+                    <!-- <span id="stimmeError" class="error-text"></span> -->
+
+                    <div class="form-check mt-4" style="color: black; margin-top: 15px;">
+                        
+                        <label for="stimme" class="form-check-label">
+Vous pouvez vous désabonner des actualités et des offres d'AWS à tout moment en suivant les instructions contenues dans les communications reçues. AWS traite vos informations comme décrit dans <a href="https://aws.amazon.com/privacy/" style="text-decoration: none ; ">l'Avis de confidentialité AWS.</a> 
+                        </label>
+                    </div>
+                    <span id="stimmeError" class="error-text"></span>
+                    
+            </div>
+
+
+            <!-- Button -->
+            <div style="text-align: center; margin-top: -80px; margin-left: 40px;">
+                <button type="submit" onclick="validateForm(event)"
+                    style="width: 160px; height: 40px; background-color: red; border: 1px solid red; color: white; cursor: pointer; border-radius: 5px;">
+                    <b>Download Now</b>
+                </button>
+            </div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            document.getElementById("fnameError").textContent = "";
+            document.getElementById("lnameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("phoneError").textContent = "";
+            document.getElementById("cnameError").textContent = "";
+            document.getElementById("jtitleError").textContent = "";
+             document.getElementById("csizeError").textContent = "";
+            // document.getElementById("addressError").textContent = "";
+            // document.getElementById("cityError").textContent = "";
+            // document.getElementById("pcodeError").textContent = "";
+             document.getElementById("indError").textContent = "";
+             document.getElementById("jobroleError").textContent = "";
+             document.getElementById("pcodeError").textContent = "";
+            document.getElementById("countryError").textContent = "";
+            // document.getElementById("stimmeError").textContent = "";
+
+
+            let isValid = true;
+
+            if (document.getElementById("fname").value === "") {
+                document.getElementById("fnameError").textContent = "Ce champ est obligatoire";
+                document.getElementById("fnameError").style.color = "red";
+                document.getElementById("fnameError").style.marginRight = "90px"
+                document.getElementById("fnameError").style.fontSize = "12px"
+                isValid = false;
+            }
+
+            if (document.getElementById("lname").value === "") {
+                document.getElementById("lnameError").textContent = "Ce champ est obligatoire";
+                document.getElementById("lnameError").style.color = "red";
+                document.getElementById("lnameError").style.marginRight = "90px"
+                document.getElementById("lnameError").style.fontSize = "12px"
+                isValid = false;
+            }
+
+            const email = document.getElementById("email").value;
+            const emailErrorElement = document.getElementById("emailError");
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (email === "") {
+                emailErrorElement.textContent = "Ce champ est obligatoire";
+                emailErrorElement.style.color = "red";
+                emailErrorElement.style.fontSize = "12px";
+                emailErrorElement.style.marginRight = "90px";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                emailErrorElement.textContent = "Ce champ est obligatoire";
+                emailErrorElement.style.color = "red";
+                emailErrorElement.style.fontSize = "12px";
+                emailErrorElement.style.marginRight = "90px";
+                isValid = false;
+            }
+
+            const phone = document.getElementById("phone").value;
+            const phoneErrorElement = document.getElementById("phoneError");
+            const phonePattern = /^[0-9]{10,15}$/; // Accepts 10-15 digits
+
+            if (phone === "") {
+                phoneErrorElement.textContent = "Ce champ est obligatoire";
+                phoneErrorElement.style.color = "red";
+                phoneErrorElement.style.fontSize = "12px";
+                phoneErrorElement.style.marginLeft = "5px";
+                isValid = false;
+            } else if (!phonePattern.test(phone)) {
+                phoneErrorElement.textContent = "Ce champ est obligatoire";
+                phoneErrorElement.style.color = "red";
+                phoneErrorElement.style.fontSize = "12px";
+                phoneErrorElement.style.marginLeft = "5px";
+                isValid = false;
+            }
+
+            if (document.getElementById("cname").value === "") {
+                document.getElementById("cnameError").textContent = "Ce champ est obligatoire";
+                document.getElementById("cnameError").style.color = "red";
+                document.getElementById("cnameError").style.marginLeft = "5px"
+                document.getElementById("cnameError").style.fontSize = "12px"
+                isValid = false;
+            }
+            if (document.getElementById("ind").value === "") {
+                document.getElementById("indError").textContent = "Ce champ est obligatoire";
+                document.getElementById("indError").style.color = "red";
+                document.getElementById("indError").style.marginLeft = "5px"
+                document.getElementById("indError").style.fontSize = "12px"
+                isValid = false;
+            }
+            if (document.getElementById("pcode").value === "") {
+                document.getElementById("pcodeError").textContent = "Ce champ est obligatoire";
+                document.getElementById("pcodeError").style.color = "red";
+                document.getElementById("pcodeError").style.marginLeft = "5px"
+                document.getElementById("pcodeError").style.fontSize = "12px"
+                isValid = false;
+            }
+            if (document.getElementById("jobrole").value === "") {
+                document.getElementById("jobroleError").textContent = "Ce champ est obligatoire";
+                document.getElementById("jobroleError").style.color = "red";
+                document.getElementById("jobroleError").style.marginLeft = "5px"
+                document.getElementById("jobroleError").style.fontSize = "12px"
+                isValid = false;
+            }
+            if (document.getElementById("jtitle").value === "") {
+                document.getElementById("jtitleError").textContent = "Ce champ est obligatoire";
+                document.getElementById("jtitleError").style.color = "red";
+                document.getElementById("jtitleError").style.marginLeft = "5px"
+                document.getElementById("jtitleError").style.fontSize = "12px"
+                isValid = false;
+            }
+
+             if (document.getElementById("csize").value === "") {
+                 document.getElementById("csizeError").textContent = "Ce champ est obligatoire";
+                 document.getElementById("csizeError").style.color = "red";
+                 document.getElementById("csizeError").style.marginLeft = "5px"
+                 document.getElementById("csizeError").style.fontSize = "12px"
+                 isValid = false;
+            }
+
+            // if (document.getElementById("ind").value === "") {
+            //     document.getElementById("indError").textContent = "Please Select Industry Type";
+            //     document.getElementById("indError").style.color = "red";
+            //     document.getElementById("indError").style.marginLeft = "5px"
+            //     document.getElementById("indError").style.fontSize = "12px"
+            //     isValid = false;
+            // }
+
+            // if (document.getElementById("address").value === "") {
+            //     document.getElementById("addressError").textContent = "Please Enter your Address";
+            //     document.getElementById("addressError").style.color = "red";
+            //     document.getElementById("addressError").style.marginLeft = "5px"
+            //     document.getElementById("addressError").style.fontSize = "12px"
+            //     isValid = false;
+            // }
+
+            // if (document.getElementById("city").value === "") {
+            //     document.getElementById("cityError").textContent = "Please Enter Your City";
+            //     document.getElementById("cityError").style.color = "red";
+            //     document.getElementById("cityError").style.marginLeft = "5px"
+            //     document.getElementById("cityError").style.fontSize = "12px"
+            //     isValid = false;
+            // }
+
+            // if (document.getElementById("pcode").value === "") {
+            //     document.getElementById("pcodeError").textContent = "Please Enter Your Post Code";
+            //     document.getElementById("pcodeError").style.color = "red";
+            //     document.getElementById("pcodeError").style.marginLeft = "5px"
+            //     document.getElementById("pcodeError").style.fontSize = "12px"
+            //     isValid = false;
+            // }
+
+            if (document.getElementById("country").value === "") {
+                document.getElementById("countryError").textContent = "Ce champ est obligatoire";
+                document.getElementById("countryError").style.color = "red";
+                document.getElementById("countryError").style.marginLeft = "5px"
+                document.getElementById("countryError").style.fontSize = "12px"
+                isValid = false;
+            }
+
+            // const stimmenChecked = document.getElementById("stimme").checked;
+            // const stimmeErrorElement = document.getElementById("stimmeError");
+
+            // if (!stimmenChecked) {
+            //     stimmeErrorElement.textContent = "Ce champ est obligatoire";
+            //     stimmeErrorElement.style.color = "red";
+            //     stimmeErrorElement.style.fontSize = "12px";
+            //     stimmeErrorElement.style.marginLeft = "50px";
+            //     isValid = false;
+            // }
+
+            if (isValid) {
+               window.location.href="pdf/les-7-essential-data-use-cases-for-startups-FR.pdf";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
